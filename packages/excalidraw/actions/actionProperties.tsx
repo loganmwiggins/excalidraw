@@ -671,7 +671,7 @@ export const actionChangeFontSize = register({
         type="range" 
         className="our-slider"
         min="16" 
-        max="36" 
+        max="300" 
         step="1"
         value={
           getFormValue(
