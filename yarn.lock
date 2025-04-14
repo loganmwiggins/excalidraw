@@ -1082,11 +1082,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@excalidraw/common@file:C:\\Users\\jmfumej\\excalidraw\\packages\\common":
+"@excalidraw/common@file:C:\\Users\\jmflpat\\OneDrive - JM Family Enterprises\\HackbrightAcademy\\PeerReviews\\CodeJam14_Excalidraw_Mahlon\\excalidraw\\packages\\common":
   version "0.1.0"
   resolved "file:packages/common"
 
-"@excalidraw/element@file:C:\\Users\\jmfumej\\excalidraw\\packages\\element":
+"@excalidraw/element@file:C:\\Users\\jmflpat\\OneDrive - JM Family Enterprises\\HackbrightAcademy\\PeerReviews\\CodeJam14_Excalidraw_Mahlon\\excalidraw\\packages\\element":
   version "0.1.0"
   resolved "file:packages/element"
 
@@ -1095,7 +1095,7 @@
   resolved "https://registry.npmjs.org/@excalidraw/eslint-config/-/eslint-config-1.0.3.tgz"
   integrity sha512-GemHNF5Z6ga0BWBSX7GJaNBUchLu6RwTcAB84eX1MeckRNhNasAsPCdelDlFalz27iS4RuYEQh0bPE8SRxJgbQ==
 
-"@excalidraw/excalidraw@*", "@excalidraw/excalidraw@file:C:\\Users\\jmfumej\\excalidraw\\packages\\excalidraw":
+"@excalidraw/excalidraw@*", "@excalidraw/excalidraw@file:C:\\Users\\jmflpat\\OneDrive - JM Family Enterprises\\HackbrightAcademy\\PeerReviews\\CodeJam14_Excalidraw_Mahlon\\excalidraw\\packages\\excalidraw":
   version "0.18.0"
   resolved "file:packages/excalidraw"
   dependencies:
@@ -1141,7 +1141,7 @@
   resolved "https://registry.npmjs.org/@excalidraw/markdown-to-text/-/markdown-to-text-0.1.2.tgz"
   integrity sha512-1nDXBNAojfi3oSFwJswKREkFm5wrSjqay81QlyRv2pkITG/XYB5v+oChENVBQLcxQwX4IUATWvXM5BcaNhPiIg==
 
-"@excalidraw/math@file:C:\\Users\\jmfumej\\excalidraw\\packages\\math":
+"@excalidraw/math@file:C:\\Users\\jmflpat\\OneDrive - JM Family Enterprises\\HackbrightAcademy\\PeerReviews\\CodeJam14_Excalidraw_Mahlon\\excalidraw\\packages\\math":
   version "0.1.0"
   resolved "file:packages/math"
 
@@ -1169,7 +1169,7 @@
   resolved "https://registry.npmjs.org/@excalidraw/random-username/-/random-username-1.1.0.tgz"
   integrity sha512-nULYsQxkWHnbmHvcs+efMkJ4/9TtvNyFeLyHdeGxW0zHs6P+jYVqcRff9A6Vq9w9JXeDRnRh2VKvTtS19GW2qA==
 
-"@excalidraw/utils@file:C:\\Users\\jmfumej\\excalidraw\\packages\\utils":
+"@excalidraw/utils@file:C:\\Users\\jmflpat\\OneDrive - JM Family Enterprises\\HackbrightAcademy\\PeerReviews\\CodeJam14_Excalidraw_Mahlon\\excalidraw\\packages\\utils":
   version "0.1.2"
   resolved "file:packages/utils"
   dependencies:
@@ -4964,7 +4964,7 @@ events@^3.2.0:
   resolved "https://registry.npmjs.org/events/-/events-3.3.0.tgz"
   integrity sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q==
 
-"excalidraw-app@file:C:\\Users\\jmfumej\\excalidraw\\excalidraw-app":
+"excalidraw-app@file:C:\\Users\\jmflpat\\OneDrive - JM Family Enterprises\\HackbrightAcademy\\PeerReviews\\CodeJam14_Excalidraw_Mahlon\\excalidraw\\excalidraw-app":
   version "1.0.0"
   resolved "file:excalidraw-app"
   dependencies:
@@ -8222,7 +8222,6 @@ string-natural-compare@^3.0.1:
   resolved "https://registry.npmjs.org/string-natural-compare/-/string-natural-compare-3.0.1.tgz"
   integrity sha512-n3sPwynL1nwKi3WJ6AIsClwBMa0zTi54fn2oLU6ndfTSIO05xaznjSf15PcBZU6FNWbmN5Q6cxT4V5hGvB4taw==
 
-
 "string-width-cjs@npm:string-width@^4.2.0":
   version "4.2.3"
   resolved "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz"
@@ -8251,10 +8250,6 @@ string-width@^4.2.0:
     strip-ansi "^6.0.1"
 
 string-width@^4.2.3:
-
-"string-width-cjs@npm:string-width@^4.2.0", string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
-  name string-width-cjs
-
   version "4.2.3"
   resolved "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -8349,9 +8344,6 @@ stringify-object@^3.3.0:
     ansi-regex "^5.0.1"
 
 strip-ansi@^6.0.0, strip-ansi@^6.0.1:
-
-"strip-ansi-cjs@npm:strip-ansi@^6.0.1", strip-ansi@6.0.1, strip-ansi@^6.0.0, strip-ansi@^6.0.1, strip-ansi@^7.0.1:
-
   version "6.0.1"
   resolved "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz"
   integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
@@ -9317,7 +9309,7 @@ why-is-node-running@^2.3.0:
     siginfo "^2.0.0"
     stackback "0.0.2"
 
-"with-nextjs@file:C:\\Users\\jmfumej\\excalidraw\\examples\\with-nextjs":
+"with-nextjs@file:C:\\Users\\jmflpat\\OneDrive - JM Family Enterprises\\HackbrightAcademy\\PeerReviews\\CodeJam14_Excalidraw_Mahlon\\excalidraw\\examples\\with-nextjs":
   version "0.1.0"
   resolved "file:examples/with-nextjs"
   dependencies:
@@ -9325,7 +9317,7 @@ why-is-node-running@^2.3.0:
     react "19.0.0"
     react-dom "19.0.0"
 
-"with-script-in-browser@file:C:\\Users\\jmfumej\\excalidraw\\examples\\with-script-in-browser":
+"with-script-in-browser@file:C:\\Users\\jmflpat\\OneDrive - JM Family Enterprises\\HackbrightAcademy\\PeerReviews\\CodeJam14_Excalidraw_Mahlon\\excalidraw\\examples\\with-script-in-browser":
   version "1.0.0"
   resolved "file:examples/with-script-in-browser"
   dependencies:
@@ -9497,8 +9489,7 @@ workbox-window@^7.3.0, workbox-window@7.3.0:
     "@types/trusted-types" "^2.0.2"
     workbox-core "7.3.0"
 
-"wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
-  name wrap-ansi-cjs
+"wrap-ansi-cjs@npm:wrap-ansi@^7.0.0":
   version "7.0.0"
   resolved "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-7.0.0.tgz"
   integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
@@ -9516,7 +9507,6 @@ wrap-ansi@^6.2.0:
     string-width "^4.1.0"
     strip-ansi "^6.0.0"
 
-
 wrap-ansi@^7.0.0:
   version "7.0.0"
   resolved "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-7.0.0.tgz"
@@ -9525,7 +9515,7 @@ wrap-ansi@^7.0.0:
     ansi-styles "^4.0.0"
     string-width "^4.1.0"
     strip-ansi "^6.0.0"
-    
+
 wrap-ansi@^8.1.0:
   version "8.1.0"
   resolved "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-8.1.0.tgz"
