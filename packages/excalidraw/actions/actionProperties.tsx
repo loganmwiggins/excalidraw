@@ -663,146 +663,102 @@ export const actionChangeFontSize = register({
   perform: (elements, appState, value, app) => {
     return changeFontSize(elements, appState, app, () => value, value);
   },
-  PanelComponent: ({ elements, appState, updateData, app }) => (
-    <fieldset>
-      <legend>{t("labels.fontSize")}</legend>
-      {/* New slider */}
-      <input 
-        type="range" 
-        className="our-slider"
-        min="16" 
-        max="300" 
-        step="1"
-        value={
-          getFormValue(
-            elements,
-            appState,
-            (element) => {
-              if (isTextElement(element)) {
-                return element.fontSize;
-              }
-              const boundTextElement = getBoundTextElement(
-                element,
-                app.scene.getNonDeletedElementsMap(),
-              );
-              return boundTextElement?.fontSize ?? null;
+  PanelComponent: ({ elements, appState, updateData, app }) => {
+    const value =
+      getFormValue(
+        elements,
+        appState,
+        (element) => {
+          if (isTextElement(element)) {
+            return element.fontSize;
+          }
+          const boundTextElement = getBoundTextElement(
+            element,
+            app.scene.getNonDeletedElementsMap(),
+          );
+          return boundTextElement?.fontSize ?? null;
+        },
+        (element) =>
+          isTextElement(element) ||
+          getBoundTextElement(
+            element,
+            app.scene.getNonDeletedElementsMap(),
+          ) !== null,
+        (hasSelection) =>
+          hasSelection
+            ? null
+            : appState.currentItemFontSize || DEFAULT_FONT_SIZE,
+      ) ?? DEFAULT_FONT_SIZE;
+  
+    const handleChange = (val: string) => {
+      const fontSize = parseInt(val, 10);
+      if (!isNaN(fontSize)) {
+        updateData(fontSize);
+      }
+    };
+  
+    return (
+      <fieldset>
+        <legend>{t("labels.fontSize")}</legend>
+  
+        {/* Slider + Input */}
+        <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.75rem" }}>
+          <input 
+            type="range"
+            className="our-slider"
+            min="16" 
+            max="300" 
+            step="1"
+            value={value}
+            onChange={(e) => handleChange(e.target.value)}
+          />
+          <input
+            type="number"
+            min="16"
+            max="300"
+            step="1"
+            value={value}
+            onChange={(e) => handleChange(e.target.value)}
+            style={{ width: "4rem", padding: "2px 4px" }}
+          />
+        </div>
+  
+        {/* Font size buttons */}
+        <ButtonIconSelect
+          group="font-size"
+          options={[
+            {
+              value: 16,
+              text: t("labels.small"),
+              icon: FontSizeSmallIcon,
+              testId: "fontSize-small",
             },
-            (element) =>
-              isTextElement(element) ||
-              getBoundTextElement(
-                element,
-                app.scene.getNonDeletedElementsMap(),
-              ) !== null,
-            (hasSelection) =>
-              hasSelection
-                ? null
-                : appState.currentItemFontSize || DEFAULT_FONT_SIZE,
-          ) ?? DEFAULT_FONT_SIZE // 👈 Add this fallback
-        }
-        onChange={(event) => {
-          const fontSize = parseInt(event.target.value, 10);
-          updateData(fontSize);
-        }}
-      />
-{/* 
-      <Range
-        elements={elements}
-        appState={appState}
-        updateData={(value) => updateData(Number(value))}
-        getValue={() =>
-          getFormValue(
-            elements,
-            appState,
-            (element) => {
-              if (isTextElement(element)) {
-                return element.fontSize;
-              }
-              const boundTextElement = getBoundTextElement(
-                element,
-                app.scene.getNonDeletedElementsMap(),
-              );
-              return boundTextElement?.fontSize ?? null;
+            {
+              value: 20,
+              text: t("labels.medium"),
+              icon: FontSizeMediumIcon,
+              testId: "fontSize-medium",
             },
-            (element) =>
-              isTextElement(element) ||
-              getBoundTextElement(
-                element,
-                app.scene.getNonDeletedElementsMap(),
-              ) !== null,
-            (hasSelection) =>
-              hasSelection
-                ? null
-                : appState.currentItemFontSize || DEFAULT_FONT_SIZE,
-          ) ?? DEFAULT_FONT_SIZE
-        }
-        label={t("labels.fontSize")}
-        min={12}
-        max={64}
-        step={1}
-        testId="font-size"
-      /> */}
-
-      {/* Old buttons */}
-      <ButtonIconSelect
-        group="font-size"
-        options={[
-          {
-            value: 16,
-            text: t("labels.small"),
-            icon: FontSizeSmallIcon,
-            testId: "fontSize-small",
-          },
-          {
-            value: 20,
-            text: t("labels.medium"),
-            icon: FontSizeMediumIcon,
-            testId: "fontSize-medium",
-          },
-          {
-            value: 28,
-            text: t("labels.large"),
-            icon: FontSizeLargeIcon,
-            testId: "fontSize-large",
-          },
-          {
-            value: 36,
-            text: t("labels.veryLarge"),
-            icon: FontSizeExtraLargeIcon,
-            testId: "fontSize-veryLarge",
-          },
-        ]}
-        value={getFormValue(
-          elements,
-          appState,
-          (element) => {
-            if (isTextElement(element)) {
-              return element.fontSize;
-            }
-            const boundTextElement = getBoundTextElement(
-              element,
-              app.scene.getNonDeletedElementsMap(),
-            );
-            if (boundTextElement) {
-              return boundTextElement.fontSize;
-            }
-            return null;
-          },
-          (element) =>
-            isTextElement(element) ||
-            getBoundTextElement(
-              element,
-              app.scene.getNonDeletedElementsMap(),
-            ) !== null,
-          (hasSelection) =>
-            hasSelection
-              ? null
-              : appState.currentItemFontSize || DEFAULT_FONT_SIZE,
-        )}
-        onChange={(value) => updateData(value)}
-      />
-    </fieldset>
-  ),
-});
+            {
+              value: 28,
+              text: t("labels.large"),
+              icon: FontSizeLargeIcon,
+              testId: "fontSize-large",
+            },
+            {
+              value: 36,
+              text: t("labels.veryLarge"),
+              icon: FontSizeExtraLargeIcon,
+              testId: "fontSize-veryLarge",
+            },
+          ]}
+          value={value}
+          onChange={(val) => updateData(val)}
+        />
+      </fieldset>
+    );
+  }
+});  
 
 export const actionDecreaseFontSize = register({
   name: "decreaseFontSize",
